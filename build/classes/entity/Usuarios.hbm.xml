@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="entity">
+	<class name="Usuario" table="usuario">
+		<id name="id" column="id" type="java.lang.Integer">
+		<generator class="native"/>
+		</id>
+		<property name="nome" column="nome" type="java.lang.String" not-null="true"/>
+		<property name="email" column="email" type="java.lang.String" not-null="false"/>
+		<property name="sexo" column="sexo" type="java.lang.String" not-null="true"/>
+		<property name="usuario" column="usuario" type="java.lang.String" not-null="true"/>
+		<property name="senha" column="senha" type="java.lang.String" not-null="true"/>
+		<many-to-one name="perfil" class="Perfil" column="id_perfil"></many-to-one>
+		
+		
+		
+	
+	</class>
+
+
+
+
+
+
+
+
+
+</hibernate-mapping>
